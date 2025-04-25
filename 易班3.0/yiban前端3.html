@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>请销假</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#4AA4F6',secondary:'#F5F5F5'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+background-color: #f8f9fa;
+}
+.status-tag {
+font-size: 0.625rem;
+padding: 1px 4px;
+border-radius: 2px;
+color: white;
+background-color: #ff6b6b;
+margin-left: 5px;
+}
+.status-approved {
+color: #2ecc71;
+}
+.status-canceled {
+color: #7f8c8d;
+}
+</style>
+</head>
+<body class="bg-gray-50">
+<!-- 导航栏 -->
+<div class="fixed top-0 w-full bg-primary text-white h-12 flex items-center justify-between px-4 z-10">
+<div class="w-8 h-8 flex items-center justify-center cursor-pointer" id="backButton2">
+<i class="ri-arrow-left-s-line ri-lg"></i>
+</div>
+<div class="text-center text-lg font-medium">请销假</div>
+<div class="w-8 h-8 flex items-center justify-center cursor-pointer">
+<i class="ri-more-line ri-lg"></i>
+</div>
+</div>
+<!-- 内容区域 -->
+<div class="pt-12 pb-16">
+<!-- 我的申请入口 -->
+<div class="bg-white flex items-center justify-between px-5 py-4 cursor-pointer">
+<div class="flex items-center">
+<div class="w-6 h-6 flex items-center justify-center mr-2 text-gray-500">
+<i class="ri-file-list-line"></i>
+</div>
+<span class="text-gray-700">我的申请</span>
+</div>
+<div class="w-5 h-5 flex items-center justify-center text-gray-400">
+<i class="ri-arrow-right-s-line"></i>
+</div>
+</div>
+<div class="mt-3 px-4">
+<!-- 请假记录1 -->
+<div class="bg-white rounded-md mb-4 overflow-hidden">
+<div class="p-4">
+<div class="flex justify-between items-center mb-3">
+<div class="flex items-center">
+<span class="text-gray-700 font-medium">我的请假</span>
+<span class="status-tag">离校</span>
+</div>
+<span class="text-gray-500 text-sm">2025-04-25</span>
+</div>
+<div class="text-gray-600 text-sm mb-2">
+开始时间: 
+</div>
+<div class="text-gray-600 text-sm mb-3 flex justify-between">
+<div>结束时间: </div>
+<div class="w-5 h-5 flex items-center justify-center text-gray-400">
+<i class="ri-arrow-right-s-line"></i>
+</div>
+</div>
+<div class="status-approved text-sm">审批通过</div>
+<div class="border-t border-gray-100 mt-3 pt-3 flex justify-center">
+<button class="text-primary text-sm cursor-pointer !rounded-button">销假</button>
+</div>
+</div>
+</div>
+
+<!-- 请假记录3 -->
+<div class="bg-white rounded-md mb-4 overflow-hidden">
+<div class="p-4">
+<div class="flex justify-between items-center mb-3">
+<div class="flex items-center">
+<span class="text-gray-700 font-medium">我的请假</span>
+<span class="status-tag">离校</span>
+</div>
+<span class="text-gray-500 text-sm">2025-04-05</span>
+</div>
+<div class="text-gray-600 text-sm mb-2">
+开始时间: 2025-04-05 10:00:00
+</div>
+<div class="text-gray-600 text-sm mb-3 flex justify-between">
+<div>结束时间: 2025-04-05 16:30:00</div>
+<div class="w-5 h-5 flex items-center justify-center text-gray-400">
+<i class="ri-arrow-right-s-line"></i>
+</div>
+</div>
+<div class="status-approved text-sm">审批通过</div>
+<div class="border-t border-gray-100 mt-3 pt-3 flex justify-center text-gray-500 text-sm">
+已于 2025-04-10 09:01 销假
+<div class="w-5 h-5 flex items-center justify-center ml-1 text-primary">
+<i class="ri-check-line"></i>
+</div>
+</div>
+</div>
+</div>
+<!-- 请假记录4 -->
+<div class="bg-white rounded-md mb-4 overflow-hidden">
+<div class="p-4">
+<div class="flex justify-between items-center mb-3">
+<div class="flex items-center">
+<span class="text-gray-700 font-medium">我的请假</span>
+<span class="status-tag">离校</span>
+</div>
+<span class="text-gray-500 text-sm">2025-03-28</span>
+</div>
+<div class="text-gray-600 text-sm mb-2">
+开始时间: 2025-03-28 08:30:00
+</div>
+<div class="text-gray-600 text-sm mb-3 flex justify-between">
+<div>结束时间: 2025-03-28 17:30:00</div>
+<div class="w-5 h-5 flex items-center justify-center text-gray-400">
+<i class="ri-arrow-right-s-line"></i>
+</div>
+</div>
+<div class="status-approved text-sm">审批通过</div>
+<div class="border-t border-gray-100 mt-3 pt-3 flex justify-center text-gray-500 text-sm">
+已于 2025-03-29 08:15 销假
+<div class="w-5 h-5 flex items-center justify-center ml-1 text-primary">
+<i class="ri-check-line"></i>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- 底部操作栏 -->
+<div class="fixed bottom-0 w-full bg-primary text-white h-14 flex items-center justify-center cursor-pointer">
+<span class="font-medium">请假申请</span>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const cancelButtons = document.querySelectorAll('button');
+    cancelButtons.forEach(button => {
+        if (button.textContent === '销假') {
+            button.addEventListener('click', function() {
+                const modal = document.createElement('div');
+                modal.className = 'fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-20';
+                modal.innerHTML = `
+<div class="bg-white rounded-lg w-4/5 overflow-hidden">
+<div class="p-4 text-center">
+<h3 class="font-medium text-lg mb-2">确认销假</h3>
+<p class="text-gray-600 text-sm">确定要销假吗？</p>
+</div>
+<div class="flex border-t border-gray-100">
+<button class="cancel-modal flex-1 py-3 text-gray-500 border-r border-gray-100 !rounded-none">取消</button>
+<button class="confirm-cancel flex-1 py-3 text-primary !rounded-none">确定</button>
+</div>
+</div>
+`;
+                document.body.appendChild(modal);
+                modal.querySelector('.cancel-modal').addEventListener('click', function() {
+                    document.body.removeChild(modal);
+                });
+                modal.querySelector('.confirm-cancel').addEventListener('click', function() {
+                    const now = new Date();
+                    const formattedDate = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')} ${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}`;
+                    const recordDiv = button.closest('.bg-white');
+                    const statusDiv = recordDiv.querySelector('.border-t');
+                    statusDiv.innerHTML = `
+<div class="w-full text-center text-gray-500 text-sm pt-3">
+已于 ${formattedDate} 销假
+<div class="inline-block w-5 h-5 align-middle ml-1 text-primary">
+<i class="ri-check-line"></i>
+</div>
+</div>
+`;
+                    document.body.removeChild(modal);
+                });
+            });
+        }
+    });
+
+    // 底部请假申请按钮
+    const applyButton = document.querySelector('.fixed.bottom-0');
+    applyButton.addEventListener('click', function() {
+        // 这里可以添加跳转到请假申请页面的逻辑
+        console.log('跳转到请假申请页面');
+    });
+
+    // 返回第二页
+    const backButton = document.getElementById('backButton2');
+    backButton.addEventListener('click', function() {
+        window.location.href = 'yiban前端2.html';
+    });
+});
+</script>
+</body>
+</html>
