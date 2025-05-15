@@ -25,6 +25,15 @@
             }
         }
     </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const leaveData = JSON.parse(localStorage.getItem('leaveData'));
+            if (leaveData && leaveData.name) {
+                document.getElementById('leaveTitle').textContent = `${leaveData.name}的请假`;
+                document.getElementById('mainTitle').textContent = `${leaveData.name}的请假`;
+            }
+        });
+    </script>
     <style type="text/tailwindcss">
         @layer utilities {
             @keyframes spin-slow {
@@ -86,7 +95,7 @@
             vertical-align: middle;
             height: 0.95em;
             width: 5px;
-            background-color: #59a5f0;
+            background-color: #93c0ee;
             margin-right: 8px;
             margin-top: -1px;
         }
@@ -99,7 +108,7 @@
             <i class="fa fa-arrow-left text-xl"></i>
             <i class="fa fa-times text-xl"></i>
         </div>
-        <span class="text-lg font-medium">陈鑫的请假</span>
+        <span class="text-lg font-medium" id="leaveTitle">陈鑫的请假</span>
         <div class="absolute right-4 flex items-center space-x-4">
             <i class="fa fa-ellipsis-h text-xl"></i>
         </div>
@@ -108,7 +117,7 @@
     <main class="pt-14 pb-16">
         <!-- 标题部分 -->
         <section class="bg-white p-4 relative border-b border-gray-200">
-            <h1 class="text-xl font-bold text-center text-textDark">陈鑫的请假</h1>
+            <h1 class="text-lg font-medium text-center text-textDark" id="mainTitle">陈鑫的请假</h1>
             <div class="approval-stamp">
                 <img src="star.png" alt="审批通过">
                 <div class="star-container">
@@ -119,9 +128,9 @@
         <!-- 申请人信息 -->
         <section class="bg-white my-3 p-4">
             <h2 class="text-textDark font-semibold mb-3">申请人</h2>
-            <div class="text-textMedium">
+            <div class="text-textMedium pl-8 space-y-4" style="padding-left: 4em;">
                 <div class="flex items-center py-2 border-b border-gray-100">
-                    <span class="w-24">姓名</span>
+                    <span class="w-24" style="text-align: right;">姓名</span><span class="inline-block w-8" style="vertical-align:baseline;margin-top:-2px"></span>
                     <span id="applicantInfo"></span>
                     <script>
                         document.addEventListener('DOMContentLoaded', function() {
@@ -147,7 +156,7 @@ document.getElementById('reminderTime').textContent = formattedTime;
         <!-- 申请内容 -->
         <section class="bg-white my-3 p-4">
             <h2 class="text-textDark font-semibold mb-3">申请内容</h2>
-            <div class="text-textMedium">
+            <div class="text-textMedium pl-8 space-y-4" style="padding-left: 6em;">
                 <div class="flex items-center py-2 border-b border-gray-100">
                     <span class="w-24">审批编号</span>
                     <span>20250424112934886466</span>
@@ -173,7 +182,7 @@ document.getElementById('reminderTime').textContent = formattedTime;
                     <span>其他</span>
                 </div>
                 <div class="flex items-center py-2 border-b border-gray-100">
-                    <span class="w-24">本人联系电话</span>
+                    <span class="w-24">本人联系电<br style="display:block;margin-top:-0.5em">话</span>
                     <span>15772792298</span>
                 </div>
                 <div class="flex items-center py-2 border-b border-gray-100">
@@ -181,7 +190,7 @@ document.getElementById('reminderTime').textContent = formattedTime;
                     <span>尹汉芬</span>
                 </div>
                 <div class="flex items-center py-2 border-b border-gray-100">
-                    <span class="w-24">紧急联系电话</span>
+                    <span class="w-24">紧急联系电<br style="display:block;margin-top:-0.5em">话</span>
                     <span>15117647928</span>
                 </div>
                 <div class="flex items-start py-2 border-b border-gray-100">
