@@ -121,8 +121,8 @@
             items: [
                 { name: '审批编号', value: '20250786456790321456' },
                 { name: '是否离校', value: '是' },
-                { name: '开始时间', value: storedData.startTime },
-                { name: '结束时间', value: storedData.endTime },
+                { name: '开始时间', value: storedData.startTime.replace('T', ' ') },
+                { name: '结束时间', value: storedData.endTime.replace('T', ' ') },
                 { name: '时长（天）', value: '0.5' },
                 { name: '请假类型', value: '其他' },
                 { name: '本人联系电话', value: storedData.phone },
@@ -133,7 +133,7 @@
                 { name: '佐证材料', value: '' }
             ],
             approvers: [
-                { name: storedData.counselor, id: '122024010', time: storedData.startTime, status: '已通过' }
+                { name: storedData.counselor, id: '122024010', time: storedData.startTime.replace('T', ' '), status: '已通过' }
             ]
         };
 
