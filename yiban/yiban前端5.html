@@ -15,7 +15,7 @@
     <div id="sub-root">
         <div class="hx-layout">
             <main class="hx-content">
-                <div class="nav-bar" style="background-color: rgb(73, 194, 255); color: white; padding: 10px; display: flex; justify-content: space-between; align-items: center;"><div><span class="back-arrow" style="font-size: 1.5em; margin-right: 0em;"></span><span class="close-btn" style="font-size: 1.2em;">X</span></div><div style="display: flex; align-items: center; justify-content: center; width: 100%; font-size: 1.2em; text-align: center;"><span id="studentName"></span></div><div><span class="more-options">•••</span></div></div><div class="wfTitle___Y-ebx" style="text-align: center; font-size: 1.2em; margin-top: 0.5em;"><span id="studentName"></span></div>
+                <div class="nav-bar" style="background-color: rgb(108, 176, 249); color: white; padding: 10px; display: flex; justify-content: space-between; align-items: center;"><div><span class="back-arrow" style="font-size: 1.5em; margin-right: 0em; cursor: pointer;" onclick="window.history.back()"></span><span class="close-btn" style="font-size: 1.2em;">X</span></div><div style="display: flex; align-items: center; justify-content: center; width: 100%; font-size: 1.2em; text-align: center;"><span id="studentName"></span></div><div><span class="more-options">•••</span></div></div><div class="wfTitle___Y-ebx" style="text-align: center; font-size: 1.2em; margin-top: 0.5em;"><span id="studentName"></span></div>
                 <div class="hx-detail">
                     <div class="hx-detail-group">
                         <div class="hx-title-detail">
@@ -171,19 +171,13 @@ document.querySelector('.wfTitle___Y-ebx span').textContent = nameFromStorage + 
                     <div class="nodeleft___2q7Sg" style="width: 100%;">
                         <div style="display: flex; justify-content: space-between; width: 100%;">
                             <div><span class="nodeindex___Cya0J">${num + 1}</span> ${approver.name}(${approver.id})</div>
-                            <div class="nodestate___Npp7u" style="margin-left: auto;"><span>通过</span></div>
+                            <div style="display: flex; gap: 1em;">
+                                <div class="nodestate___Npp7u"><span>通过</span></div>
+                                <span class="workTime___PJH95">${approver.time}</span>
+                            </div>
                         </div>
                         <div class="approverOpinion___3xcsE" style="width: 100%; padding-left: 2em;"><span style="color: rgb(135, 208, 104);">已同意</span></div>
                     </div>
-                    <div class="nodestate___Npp7u" style="margin-left: auto;"><span>通过</span>
-                    ${num === data.approvers.length - 1 ? `<span class="stateTime___2bJzR">${approver.time}</span>` : ''}</div>
-                    <div class="noderight___urUWJ" style="width: 100%; margin-top: 8px;">
-                            <div class="nodeapprover___1KJaE">
-                                <div style="width: 100%; text-align: right;">
-                                    <span class="workTime___PJH95">${approver.time}</span>
-                                </div>
-                            </div>
-                        </div>
                 `;
                 approversContainer.appendChild(approverDiv);
             });
