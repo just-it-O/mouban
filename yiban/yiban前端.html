@@ -61,6 +61,22 @@
         </section>
     </main>
     <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const leaveData = JSON.parse(localStorage.getItem('leaveData'));
+            if(leaveData) {
+                document.querySelector('input[name="name"]').value = leaveData.name || '';
+                document.querySelector('input[name="studentId"]').value = leaveData.studentId || '';
+                document.querySelector('input[name="startTime"]').value = leaveData.startTime || '';
+                document.querySelector('input[name="endTime"]').value = leaveData.endTime || '';
+                document.querySelector('input[name="phone"]').value = leaveData.phone || '';
+                document.querySelector('input[name="emergencyContact"]').value = leaveData.emergencyContact || '';
+                document.querySelector('input[name="emergencyPhone"]').value = leaveData.emergencyPhone || '';
+                document.querySelector('textarea[name="reason"]').value = leaveData.reason || '';
+                document.querySelector('input[name="destination"]').value = leaveData.destination || '';
+                document.querySelector('input[name="counselor"]').value = leaveData.counselor || '';
+            }
+        });
+
         document.getElementById('leaveForm').addEventListener('submit', function(e) {
             e.preventDefault();
             const formData = new FormData(this);
