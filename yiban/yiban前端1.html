@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>易班首页</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<script>
+tailwind.config = {
+    theme: {
+        extend: {
+            colors: {
+                primary: '#4B96F3',
+                secondary: '#FF6B35'
+            },
+            borderRadius: {
+                'none': '0px',
+                'sm': '2px',
+                DEFAULT: '4px',
+                'md': '8px',
+                'lg': '12px',
+                'xl': '16px',
+                '2xl': '20px',
+                '3xl': '24px',
+                'full': '9999px',
+                'button': '4px'
+            }
+        }
+    }
+}
+</script>
+<style>
+body {
+    width: 100%;
+    margin: 0;
+    background: #F8F9FA;
+    min-height: 100vh;
+}
+.nav-bar {
+    height: 44px;
+    background: linear-gradient(90deg, #4B96F3, #6BA6F5);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    color: white;
+}
+.content {
+    margin-top: 44px;
+    margin-bottom: 60px;
+    min-height: calc(100vh - 104px);
+}
+.tab-bar {
+    height: 60px;
+    background: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    border-top: 1px solid #EAEAEA;
+}
+.grid-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+</style>
+</head>
+<body>
+<div class="nav-bar flex items-center px-4 justify-between">
+    <div class="text-lg font-medium">贵州财经职业学院·易班</div>
+    <div class="flex items-center space-x-4">
+        <i class="fas fa-search text-white"></i>
+        <i class="fas fa-bell text-white"></i>
+    </div>
+</div>
+<div class="content">
+    <div class="banner relative w-full h-48 bg-primary overflow-hidden">
+        <img src="I3200.JPG" class="w-full h-full object-cover" alt="banner">
+        <div class="absolute bottom-4 left-0 w-full flex justify-center space-x-2">
+            <div class="w-2 h-2 rounded-full bg-white"></div>
+            <div class="w-2 h-2 rounded-full bg-white/50"></div>
+            <div class="w-2 h-2 rounded-full bg-white/50"></div>
+        </div>
+    </div>
+    <div class="grid grid-cols-5 gap-4 bg-white p-4">
+        <div class="flex flex-col items-center">
+            <div class="grid-icon bg-primary/10 rounded-lg mb-2">
+                <i class="fas fa-graduation-cap text-primary"></i>
+            </div>
+            <span class="text-xs">易班优课</span>
+        </div>
+        <div class="flex flex-col items-center">
+            <div class="grid-icon bg-secondary/10 rounded-lg mb-2">
+                <i class="fas fa-university text-secondary"></i>
+            </div>
+            <span class="text-xs">数字马院</span>
+        </div>
+        <div class="flex flex-col items-center">
+            <div class="grid-icon bg-green-100 rounded-lg mb-2">
+                <i class="fas fa-book text-green-500"></i>
+            </div>
+            <span class="text-xs">学习资源</span>
+        </div>
+        <div class="flex flex-col items-center">
+            <div class="grid-icon bg-purple-100 rounded-lg mb-2">
+                <i class="fas fa-video text-purple-500"></i>
+            </div>
+            <span class="text-xs">微影黔行</span>
+        </div>
+        <div class="flex flex-col items-center">
+            <div class="grid-icon bg-red-100 rounded-lg mb-2">
+                <i class="fas fa-flag text-red-500"></i>
+            </div>
+            <span class="text-xs">党纪学习</span>
+        </div>
+        <div class="flex flex-col items-center" id="yiban-school">
+            <div class="grid-icon bg-blue-100 rounded-lg mb-2">
+                <i class="fas fa-school text-blue-500"></i>
+            </div>
+            <span class="text-xs">易班本校化</span>
+        </div>
+        <div class="flex flex-col items-center">
+            <div class="grid-icon bg-yellow-100 rounded-lg mb-2">
+                <i class="fas fa-clipboard-check text-yellow-500"></i>
+            </div>
+            <span class="text-xs">满意度</span>
+        </div>
+        <div class="flex flex-col items-center">
+            <div class="grid-icon bg-indigo-100 rounded-lg mb-2">
+                <i class="fas fa-desktop text-indigo-500"></i>
+            </div>
+            <span class="text-xs">教务系统</span>
+        </div>
+        <div class="flex flex-col items-center">
+            <div class="grid-icon bg-pink-100 rounded-lg mb-2">
+                <i class="fas fa-heart text-pink-500"></i>
+            </div>
+            <span class="text-xs">心理健康</span>
+        </div>
+        <div class="flex flex-col items-center">
+            <div class="grid-icon bg-orange-100 rounded-lg mb-2">
+                <i class="fas fa-mask text-orange-500"></i>
+            </div>
+            <span class="text-xs">民俗文化</span>
+        </div>
+        <div class="flex flex-col items-center">
+            <div class="grid-icon bg-red-100 rounded-lg mb-2">
+                <i class="fas fa-monument text-red-500"></i>
+            </div>
+            <span class="text-xs">党史学习</span>
+        </div>
+        <div class="flex flex-col items-center">
+            <div class="grid-icon bg-cyan-100 rounded-lg mb-2">
+                <i class="fas fa-paw text-cyan-500"></i>
+            </div>
+            <span class="text-xs">易班熊</span>
+        </div>
+        <div class="flex flex-col items-center">
+            <div class="grid-icon bg-teal-100 rounded-lg mb-2">
+                <i class="fas fa-user-check text-teal-500"></i>
+            </div>
+            <span class="text-xs">诚信行动</span>
+        </div>
+        <div class="flex flex-col items-center">
+            <div class="grid-icon bg-emerald-100 rounded-lg mb-2">
+                <i class="fas fa-leaf text-emerald-500"></i>
+            </div>
+            <span class="text-xs">文明心中</span>
+        </div>
+        <div class="flex flex-col items-center">
+            <div class="grid-icon bg-sky-100 rounded-lg mb-2">
+                <i class="fas fa-school text-sky-500"></i>
+            </div>
+            <span class="text-xs">开学第一课</span>
+        </div>
+    </div>
+    <div class="mt-4 bg-white p-4">
+        <div class="flex space-x-6 mb-4">
+            <span class="text-primary font-medium">学校</span>
+            <span class="text-gray-500">原创</span>
+            <span class="text-gray-500">头条</span>
+            <span class="text-gray-500">热帖</span>
+        </div>
+        <div class="flex items-center space-x-4">
+            <img src="I3199.JPG" class="w-16 h-16 rounded-lg" alt="school">
+            <div class="flex-1">
+                <div class="font-medium mb-1">贵州财经职业学院</div>
+                <div class="text-sm text-gray-500">云游贵财职 | 720度VR全景校园</div>
+            </div>
+            <button class="px-4 py-2 bg-primary text-white rounded-button">进入溜达</button>
+        </div>
+    </div>
+</div>
+<div class="tab-bar flex items-center justify-around">
+    <div class="flex flex-col items-center">
+        <i class="fas fa-home text-primary"></i>
+        <span class="text-xs mt-1 text-primary">首页</span>
+    </div>
+    <div class="flex flex-col items-center">
+        <i class="fas fa-comments text-gray-400"></i>
+        <span class="text-xs mt-1 text-gray-400">互动</span>
+    </div>
+    <div class="flex flex-col items-center">
+        <div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center -mt-4">
+            <i class="fas fa-plus text-white text-xl"></i>
+        </div>
+        <span class="text-xs mt-1 text-gray-400">发布</span>
+    </div>
+    <div class="flex flex-col items-center">
+        <i class="fas fa-th text-gray-400"></i>
+        <span class="text-xs mt-1 text-gray-400">应用</span>
+    </div>
+    <div class="flex flex-col items-center">
+        <i class="fas fa-user text-gray-400"></i>
+        <span class="text-xs mt-1 text-gray-400">我的</span>
+    </div>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // 为易班本校化添加点击事件
+    const yibanSchool = document.getElementById('yiban-school');
+    yibanSchool.addEventListener('click', function() {
+        window.location.href = 'yiban前端2.html';
+    });
+});
+</script>
+</body>
+</html>
